@@ -64,7 +64,9 @@ print(27 % 4);
 print(4 * 6 + 3);
 
 #19) Utilizar el operador "+" en una operación donde intervengan solo variables alfanuméricas
-
+var1 = 'Argentina ';
+var2 = 'Salta';
+print(var1+var2)
 
 #20) Evaluar si "2" es igual a 2. ¿Por qué ocurre eso?
 print('2' == 2);
@@ -73,12 +75,19 @@ print('2' == 2);
 print(int('2') == 2);
 
 #22) ¿Por qué arroja error el siguiente cambio de tipo de datos? a = float('3,8')
-print(int('3,8'))
 
 #23) Crear una variable con el valor 3, y utilizar el operador '-=' para modificar su contenido
+valor = 3;
+valor -= 1;
+print(valor)
 
 #24) Realizar la operacion 1 << 2 ¿Por qué da ese resultado? ¿Qué es el sistema de numeración binario?
+print(1<<2);
 
 #25) Realizar la operación 2 + '2' ¿Por qué no está permitido? ¿Si los dos operandos serían del mismo tipo, siempre arrojaría el mismo resultado?
 
+
 #26) Realizar una operación válida entre valores de tipo entero y string
+entero = 3;
+string = 'esto se repite ';
+print(entero * string + str(entero)+ ' veces');
