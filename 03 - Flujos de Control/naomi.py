@@ -2,6 +2,7 @@
 
 # 1) Crear una variable que contenga un elemento del conjunto de números enteros y luego imprimir por pantalla si es mayor o menor a cero
 from ast import For
+from turtle import circle
 
 
 n = 12
@@ -41,16 +42,108 @@ for i in range(0,n):
 print('Este ciclo se repite',i)
 
 # 6) Utilizar un ciclo while para realizar el factorial de un número guardado en una variable, sólo si la variable contiene un número entero mayor a 0
+n= 5
+#lo que hace es : 1*2*3*4*5 hasta que x sea igual a n
+
+if(type(n)==int):
+    print(f'{n} Es un numero entero');
+    if(n>0):
+        x=1 #cuenta las vueltas
+        f=1
+        while(x<=n):
+            f*=x 
+            x+=1
+        print(f'El factorial de {n} es: {f}');
+    else:
+        print(f'{n} es menor que cero');
+else:
+    print(f'{n} No es un numero entero');
 
 # 7) Crear un ciclo for dentro de un ciclo while
 
 # 8) Crear un ciclo while dentro de un ciclo for
 
 # 9) Imprimir los números primos existentes entre 0 y 30
+tope = 30;
+n = 0;
+primo = True;
+while(n<tope):
+    for i in range(2,n):
+        if(n% i == 0):
+            primo = False;
+    if(primo):
+        print(n)
+    else:
+        primo= True
+    n+=1
 
 # 10) ¿Se puede mejorar el proceso del punto 9? Utilizar las sentencias break y/ó continue para tal fin
-
+tope = 30
+n = 0
+primo= True
+while(n<tope):
+    for i in range(2,n):
+        if(n % i == 0):
+            primo= False
+            break
+    if(primo):
+        print(f'los nuemro primos usando break son: {n}');
+    else:
+        primo = True;
+    n+=1
 # 11) En los puntos 9 y 10, se diseño un código que encuentra números primos y además se lo optimizó. ¿Es posible saber en qué medida se optimizó?
+sin_ciclo_break = 0
+tope = 30
+n = 0
+primo= True
+while(n<tope):
+    for i in range(2,n):
+        sin_ciclo_break+=1
+        if(n % i == 0):
+            primo= False
+    if(primo):
+        print(f'los nuemro primos usando break son: {n}');
+    else:
+        primo = True;
+    n+=1
+print('Cantidad de ciclo:' + str(sin_ciclo_break))
+
+
+#con break
+optimizacion = 0
+tope = 30
+n = 0
+primo= True
+while(n<tope):
+    for i in range(2,n):
+        optimizacion+=1
+        if(n % i == 0):
+            primo= False
+            break
+    if(primo):
+        print(f'Primos: {n}');
+    else:
+        primo = True;
+    n+=1
+print('Cantidad de ciclo:' + str(optimizacion))
+
+# Continue optimizacion
+optimizacion = 0
+tope = 30
+n = 0
+primo= True
+while(n<tope):
+    for i in range(2,n):
+        optimizacion+=1
+        if(n % i == 0):
+            primo= False
+            continue
+    if(primo):
+        print(f'Numeros Primos: {n}');
+    else:
+        primo = True;
+    n+=1
+print('Cantidad de ciclo:' + str(optimizacion))
 
 # 12) Si la cantidad de números que se evalúa es mayor a treinta, esa optimización crece?
 
