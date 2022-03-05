@@ -60,8 +60,20 @@ else:
     print(f'{n} No es un numero entero');
 
 # 7) Crear un ciclo for dentro de un ciclo while
+n = 0
+while(n<5):
+    n+=1
+    for i in range(0,n):
+        print(f'Ciclo For numero: {str(i)}')
+        print(f'Ciclo While numero: {str(n)}')
 
 # 8) Crear un ciclo while dentro de un ciclo for
+n = 5
+for i in range(1,n):
+    while(n<5):
+        n-=1
+    print(n, 'While')
+    print(i, 'For')
 
 # 9) Imprimir los números primos existentes entre 0 y 30
 tope = 30;
@@ -125,7 +137,7 @@ while(n<tope):
     else:
         primo = True;
     n+=1
-print('Cantidad de ciclo:' + str(optimizacion))
+print('--Cantidad de ciclo con 30: ' + str(optimizacion))
 
 # Continue optimizacion
 optimizacion = 0
@@ -146,7 +158,22 @@ while(n<tope):
 print('Cantidad de ciclo:' + str(optimizacion))
 
 # 12) Si la cantidad de números que se evalúa es mayor a treinta, esa optimización crece?
-
+optimizacion = 0
+tope = 100
+n = 0
+primo= True
+while(n<tope):
+    for i in range(2,n):
+        optimizacion+=1
+        if(n % i == 0):
+            primo= False
+            break
+    if(primo):
+        print(f'Primos: {n}');
+    else:
+        primo = True;
+    n+=1
+print('++Cantidad de ciclo con:' + str(optimizacion))
 # 13) Aplicando continue, armar un ciclo while que solo imprima los valores divisibles por 12, dentro del rango de números de 100 a 300
 n = 99
 while(n<=300):
