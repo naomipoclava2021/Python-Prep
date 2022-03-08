@@ -1,14 +1,36 @@
 # 1.A partir de una lista vacía, utilice un ciclo while para cargar allí números negativos del -15 al -1
+lista_negativos = []
+n = -15
+while(n <0 ):
+    lista_negativos.append(n)
+    n+=1
+print(lista_negativos)
 
 # 2.¿Con un ciclo while sería posible recorrer la lista para imprimir sólo los números pares?
 
+ 
+i = 0
+while i < len(lista_negativos):
+  if(lista_negativos[i] % 2 == 0):
+    print(lista_negativos[i])
+  i+=1
+
 # 3.Resolver el punto anterior sin utilizar un ciclo while
+for i in lista_negativos:
+  if(i%2 == 0):
+    print(i)
+
 
 # 4.Usando el iterable para recorrer sólo los primeros 3 elementos
-
+for i in lista_negativos[:3]:
+    print(f'Primeros elementos:{i}')
 # 5.Usando la función enumerar para obtener dentro del iterable, también el índice al que corresponde el elemento
+for p, i in enumerate(lista_negativos):
+    print('Posicion:',p,' ', 'Numero:',i)
 
 # 6.Dada la siguiente lista de números enteros entre 1 y 20, crear un ciclo donde se completen los valores faltantes: lista = [1,2,5,7,8,10,13,14,15,17,20]
+lista = [1,2,5,7,8,10,13,14,15,17,20]
+print(lista)
 
 # 7.La sucesión de Fibonacci es un listado de números que sigue la fórmula:
 # n 0 = 0
@@ -28,8 +50,18 @@
 
 # 10.A partir de la variable cadena ya dada, mostrar en qué posiciones aparece la letra "n"
 # cadena = 'Hola Mundo. Esto es una práctica del lenguaje de programación Python'
+cadena = 'Hola Mundo. Esto es una práctica del lenguaje de programación Python'
+
+letra_n = [i for i in cadena if i == 'n']
+print(letra_n)
 
 # 11.Crear un diccionario e imprimir sus claves usando un iterador
+
+nombre = ['Naomi', 'Mauro', 'Jamaica', 'Marian']
+apellido = ['Poclava', 'Serrano','Suarez','Rodrigez']
+edad = [20, 19, 99, 22]
+
+
 
 # 12.Convertir en una lista la variable "cadena" del punto 10 y luego recorrerla con un iterador
 
